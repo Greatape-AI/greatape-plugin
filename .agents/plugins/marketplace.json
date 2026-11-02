@@ -1,0 +1,20 @@
+{
+  "name": "greatape",
+  "interface": {
+    "displayName": "GreatApe"
+  },
+  "plugins": [
+    {
+      "name": "greatape",
+      "source": {
+        "source": "local",
+        "path": "./plugins/greatape"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

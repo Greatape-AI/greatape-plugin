@@ -1,0 +1,13 @@
+{
+  "name": "greatape",
+  "displayName": "GreatApe",
+  "version": "0.1.0",
+  "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+  "author": {
+    "name": "GreatApe AI",
+    "url": "https://greatapeai.com"
+  },
+  "homepage": "https://greatapeai.com",
+  "repository": "https://github.com/Greatape-AI/greatape-plugin",
+  "keywords": ["greatape", "digital-employees", "delegation", "tasks"]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "greatape",
+  "description": "GreatApe digital employees in Claude: give them tasks, follow up and read the results.",
+  "owner": {
+    "name": "GreatApe AI",
+    "url": "https://greatapeai.com"
+  },
+  "plugins": [
+    {
+      "name": "greatape",
+      "displayName": "GreatApe",
+      "source": "./plugins/greatape",
+      "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+      "category": "productivity"
+    }
+  ]
+}
