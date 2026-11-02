@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "greatape",
+  "version": "0.1.0",
+  "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+  "author": {
+    "name": "GreatApe AI",
+    "url": "https://greatapeai.com"
+  },
+  "homepage": "https://greatapeai.com",
+  "repository": "https://github.com/Greatape-AI/greatape-plugin",
+  "keywords": ["greatape", "digital-employees", "delegation", "tasks"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GreatApe",
+        "shortDescription": "Give your GreatApe digital employees work",
+        "longDescription": "See your organization's GreatApe digital employees, give one a task with a brief, answer its questions, read its progress and results, and cancel work you no longer need.",
+        "developerName": "GreatApe AI",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://greatapeai.com",
+        "defaultPrompt": [
+          "List my GreatApe employees",
+          "Ask my GreatApe employee to research our three closest competitors' pricing"
+        ]
+      }
+    }
+  }
+}
