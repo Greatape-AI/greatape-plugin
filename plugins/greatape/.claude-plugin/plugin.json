@@ -1,8 +1,8 @@
 {
   "name": "greatape",
   "displayName": "GreatApe",
-  "version": "0.1.0",
-  "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+  "version": "0.2.0",
+  "description": "Hire GreatApe digital employees, give them tasks and files, answer their questions and get the results.",
   "author": {
     "name": "GreatApe AI",
     "url": "https://greatapeai.com"

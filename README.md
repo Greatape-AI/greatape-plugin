@@ -1,11 +1,14 @@
 # GreatApe plugin
 
 Work with your GreatApe digital employees from the assistant you already use: Claude (chat, Cowork
-and Claude Code), ChatGPT and Codex. See your employees, give one a task, answer its questions,
-read its progress and results, and cancel work you no longer need.
+and Claude Code), ChatGPT and Codex. Hire an employee from what your assistant knows about your
+work, see your employees, give one a task and files, answer its questions, read its progress and
+results, and cancel work you no longer need.
 
-**Status: phase 1, staging only.** The plugin points at `https://staging.api.greatapeai.com/mcp`.
-Creating employees and sending files come in a later release.
+**Status: phase 2, staging only.** The plugin points at `https://staging.api.greatapeai.com/mcp`.
+Hiring (`create_employee`) and text files (`upload_files`) need the GreatApe server from
+coworker-agent PR #1156 and employees on the sandbox image with the `install-employee-pack-task`
+skill.
 
 ## What's here
 
@@ -18,6 +21,8 @@ plugins/greatape/
   plugin.json                        OpenAI plugin manifest
   mcp.json                           the GreatApe MCP server, for ChatGPT and Codex
   skills/greatape/SKILL.md           when to use which tool
+  skills/employee-pack/SKILL.md      interview, build the pack, hire and send it (copied from
+                                     Greatape-AI/greatapeai-skills, plus the connected step)
 ```
 
 Both plugins connect to the GreatApe MCP server, where you sign in with your GreatApe account and
