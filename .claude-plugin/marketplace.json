@@ -11,7 +11,7 @@
       "name": "greatape",
       "displayName": "GreatApe",
       "source": "./plugins/greatape",
-      "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+      "description": "Hire GreatApe digital employees, give them tasks and files, answer their questions and get the results.",
       "category": "productivity"
     }
   ]

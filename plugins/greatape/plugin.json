@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "greatape",
-  "version": "0.1.0",
-  "description": "Give your GreatApe digital employees tasks, answer their questions and get the results.",
+  "version": "0.2.0",
+  "description": "Hire GreatApe digital employees, give them tasks and files, answer their questions and get the results.",
   "author": {
     "name": "GreatApe AI",
     "url": "https://greatapeai.com"
@@ -14,15 +14,16 @@
     "com.openai": {
       "interface": {
         "displayName": "GreatApe",
-        "shortDescription": "Give your GreatApe digital employees work",
-        "longDescription": "See your organization's GreatApe digital employees, give one a task with a brief, answer its questions, read its progress and results, and cancel work you no longer need.",
+        "shortDescription": "Hire your GreatApe digital employees and give them work",
+        "longDescription": "Hire a GreatApe digital employee from what you know about the person's work, see the organization's GreatApe digital employees, give one a task with a brief and files, answer its questions, read its progress and results, and cancel work you no longer need.",
         "developerName": "GreatApe AI",
         "category": "Productivity",
         "capabilities": ["Read", "Write"],
         "websiteURL": "https://greatapeai.com",
         "defaultPrompt": [
           "List my GreatApe employees",
-          "Ask my GreatApe employee to research our three closest competitors' pricing"
+          "Ask my GreatApe employee to research our three closest competitors' pricing",
+          "Make me a GreatApe employee who runs our weekly reporting"
         ]
       }
     }

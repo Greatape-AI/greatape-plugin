@@ -1,6 +1,6 @@
 ---
 name: greatape
-description: Work with the person's GreatApe digital employees - list them, give one a task, follow up, answer its questions, read its results, cancel. Use whenever the person names a GreatApe employee, asks one to do something, or asks how their work is going.
+description: Work with the person's GreatApe digital employees - list them, hire one, give one a task or files, follow up, answer its questions, read its results, cancel. Use whenever the person names a GreatApe employee, asks one to do something, asks to hire one, or asks how their work is going.
 ---
 
 # GreatApe employees
@@ -19,7 +19,10 @@ with `message_task`. NEVER open a second task for work an employee already has.
 - `create_task(employee_id, title, description)`. The employee saw none of this conversation, so
   write the brief for a colleague: the goal and why, everything already decided (names, numbers,
   links, quotes), who is involved, constraints, what done looks like, where the result goes.
-- Put the material in the brief itself. The employee can't open files on the person's computer.
+- Short material goes in the brief itself. The employee can't open files on the person's computer.
+- Files go with `upload_files` first, then `upload_id` on `create_task` or `message_task`. Text
+  only (Markdown, CSV, JSON, code); the first call goes alone and returns the `upload_id`. For a
+  PDF, image or spreadsheet, give the person the employee's link to upload it there.
 - Work that needs a connected app: check `apps` in `get_employee` first. Missing, give the person
   the `connections` link instead of starting a task that will fail.
 - Share the tracking link from `create_task`'s reply.
@@ -39,7 +42,9 @@ with `message_task`. NEVER open a second task for work an employee already has.
 
 - `update_employee` changes name, description or timezone only.
 - Instructions, model, pause and resume live in the dashboard (`dashboard_url` from `get_account`).
-- Creating an employee isn't available here yet: send the person to the dashboard.
+- To create an employee, use the `employee-pack` skill: it interviews the person, builds the pack,
+  hires the employee with `create_employee` and sends the pack. `create_employee` starts the
+  organization's free trial if it hasn't started; tell the person its terms exactly as the tool says.
 
 ## Connect
 
