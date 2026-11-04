@@ -5,10 +5,10 @@ and Claude Code), ChatGPT and Codex. Hire an employee from what your assistant k
 work, see your employees, give one a task and files, answer its questions, read its progress and
 results, and cancel work you no longer need.
 
-**Status: phase 2, staging only.** The plugin points at `https://staging.api.greatapeai.com/mcp`.
+**Status: phase 3, staging only.** The plugin points at `https://staging.api.greatapeai.com/mcp`.
 Hiring (`create_employee`) and text files (`upload_files`) need the GreatApe server from
 coworker-agent PR #1156 and employees on the sandbox image with the `install-employee-pack-task`
-skill.
+skill. Setup links and `apps_to_fix` on `get_employee` need the phase 3 server (stacked on #1156).
 
 ## What's here
 

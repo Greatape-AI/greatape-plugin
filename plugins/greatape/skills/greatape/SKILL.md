@@ -1,6 +1,6 @@
 ---
 name: greatape
-description: Work with the person's GreatApe digital employees - list them, hire one, give one a task or files, follow up, answer its questions, read its results, cancel. Use whenever the person names a GreatApe employee, asks one to do something, asks to hire one, or asks how their work is going.
+description: Work with the person's GreatApe digital employees - list them, hire one, set one up (apps, channels, keys, rules), give one a task or files, follow up, answer its questions, read its results, cancel. Use whenever the person names a GreatApe employee, asks one to do something, asks to hire or set one up, or asks how their work is going.
 ---
 
 # GreatApe employees
@@ -23,9 +23,27 @@ with `message_task`. NEVER open a second task for work an employee already has.
 - Files go with `upload_files` first, then `upload_id` on `create_task` or `message_task`. Text
   only (Markdown, CSV, JSON, code); the first call goes alone and returns the `upload_id`. For a
   PDF, image or spreadsheet, give the person the employee's link to upload it there.
-- Work that needs a connected app: check `apps` in `get_employee` first. Missing, give the person
-  the `connections` link instead of starting a task that will fail.
+- Work that needs a connected app: check `apps` and `apps_to_fix` in `get_employee` first. Missing
+  or broken: set it up (below) instead of starting a task that will fail.
 - Share the tracking link from `create_task`'s reply.
+
+## Set up
+
+Setup happens in the employee's dashboard. You hand over links; the person signs in with the same
+GreatApe account, connects, and comes back. Any time: before, during or after its setup task.
+
+- After hiring, or when the employee's update asks for access: give the employee's own links first
+  (a per-app connect link, a per-key link from its key request, its desktop link for website
+  logins). Otherwise use `get_employee`'s `links`: `connections` (apps), `channels`, `keys`, `rules`.
+- `apps_to_fix`: tell the person each app's `problem` and give its `link`, as the tool says. A
+  two-account app needs a disconnect first; NEVER send it a connect link.
+- The person says they're done: call `get_employee` again and check `apps`, `apps_to_fix` and
+  `channels`.
+- Then tell the setup task in ONE `message_task`: what got connected, what's still missing, and
+  for each key ask whether it can see it ("I added STRIPE_KEY; can you see it?"). `get_employee`
+  shows no keys; the employee answers from its own list. Rules need no check.
+- A new conversation and you've lost the setup task? `list_tasks` finds "Set yourself up from this
+  pack"; `get_task` shows what it asked for.
 
 ## Follow up
 
