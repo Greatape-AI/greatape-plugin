@@ -1,6 +1,6 @@
 ---
 name: greatape
-description: Work with the person's GreatApe digital employees - list them, hire one, set one up (apps, channels, keys, rules), give one a task or files, follow up, answer its questions, read its results, cancel. Use whenever the person names a GreatApe employee, asks one to do something, asks to hire or set one up, or asks how their work is going.
+description: Work with the person's GreatApe digital employees - list them, hire one, set one up (apps, channels, keys, rules), give one a task or files, follow up, answer its questions, read its results, cancel, show its dashboard, decide its approvals, manage its routines, check-ins and workflow runs. Use whenever the person names a GreatApe employee, asks one to do something, asks to hire or set one up, asks how it or its work is going, or asks about its approvals, routines or check-ins.
 ---
 
 # GreatApe employees
@@ -51,6 +51,26 @@ GreatApe account, connects, and comes back. Any time: before, during or after it
 - The employee asked a question, or the person adds something: `message_task` on the same task.
 - Results arrive in the task's updates. Files come as links; pass them on.
 - Check when the person asks. Don't poll in a loop.
+
+## Manage
+
+- "How's <employee> doing?" or "show me its dashboard": `show_dashboard(employee_id)`. In Claude and
+  ChatGPT it opens a card and then a full dashboard the person can act in. Elsewhere you get the
+  summary and the dashboard link to share. To check status for yourself, use `get_employee`.
+- Approvals: an owner's rule made the employee ask first. With the dashboard open, the person
+  approves there. Otherwise `list_approvals`, tell the person what each one wants and the rule that
+  asked, ASK THEM, then `decide_approval` with their exact answer (and their note, if any). NEVER
+  decide on your own. Only the employee's owner can.
+- Routines: `schedule(employee_id, command)`, the employee's own tool: `create`, `list`, `get`,
+  `update`, `cancel`. Each fire starts fresh work, so write `prompt` as a full brief: what to do,
+  where the result goes, when to skip. CONFIRM WITH THE PERSON before `cancel`.
+- Check-ins (heartbeat): `set_heartbeat` turns them on or off and sets how often, the active hours
+  and standing instructions. Pass only what changes. A change to the employee's own checklist or
+  goals goes to the employee as a task or message instead.
+- Before changing how the employee works, read its config: `read_employee_config` (the list, then
+  one file). NEVER rewrite it yourself: ask the employee with `message_task` or `create_task`.
+- Workflow runs: `workflow_runs(employee_id, "list")`, then `"status"` or `"logs"` with a `run_id`.
+  Read only: starting and stopping runs is the employee's.
 
 ## Stop
 
