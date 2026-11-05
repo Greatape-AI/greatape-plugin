@@ -64,8 +64,9 @@ GreatApe account, connects, and comes back. Any time: before, during or after it
   asked, ASK THEM, then `decide_approval` with their exact answer (and their note, if any). NEVER
   decide on your own. Only the employee's owner can.
 - Routines: `schedule(employee_id, command)`, the employee's own tool: `create`, `list`, `get`,
-  `update`, `cancel`. Each fire starts fresh work, so write `prompt` as a full brief: what to do,
-  where the result goes, when to skip. CONFIRM WITH THE PERSON before `cancel`.
+  `update`, `pause`, `resume`, `cancel`. Each fire starts fresh work, so write `prompt` as a full
+  brief: what to do, where the result goes, when to skip. "Stop it for now" is `pause`, not
+  `cancel`. CONFIRM WITH THE PERSON before `cancel`: it can't be undone.
 - Check-ins (heartbeat): `set_heartbeat` turns them on or off and sets how often, the active hours
   and standing instructions. Pass only what changes. A change to the employee's own checklist or
   goals goes to the employee as a task or message instead.
