@@ -54,9 +54,8 @@ GreatApe account, connects, and comes back. Any time: before, during or after it
 
 ## Manage
 
-- "Show me my employees" or "how is everyone doing?": `show_employees`. In Claude and ChatGPT it
-  opens their cards; a card opens that employee's dashboard. Elsewhere you get the list. To look up
-  an id for yourself, use `list_employees`, which opens nothing.
+- "Show me my employees" or "how is everyone doing?": `list_employees`. In Claude and ChatGPT the
+  person sees their cards; a card opens that employee's dashboard. Elsewhere, list them yourself.
 - "How's <employee> doing?" or "show me its dashboard": `show_dashboard(employee_id)`. In Claude and
   ChatGPT it opens a card and then a full dashboard the person can act in. Elsewhere you get the
   summary and the dashboard link to share. To check status for yourself, use `get_employee`.
