@@ -5,12 +5,10 @@ and Claude Code), ChatGPT and Codex. Hire an employee from what your assistant k
 work, see your employees, give one a task and files, answer its questions, read its progress and
 results, and cancel work you no longer need.
 
-**Status: phase 4, staging only.** The plugin points at `https://staging.api.greatapeai.com/mcp`.
-Hiring (`create_employee`) and text files (`upload_files`) need the GreatApe server from
-coworker-agent PR #1156 and employees on the sandbox image with the `install-employee-pack-task`
-skill. Setup links and `apps_to_fix` need phase 3 (#1159). The dashboard in the chat, approvals,
-routines, check-ins, config and workflow runs need phase 4 (stacked on #1159) and the dashboard's
-`mcp-app` screen.
+**Status: phase 4.** The plugin points at `https://api.greatapeai.com/mcp`. The server is
+coworker-agent #1165 (phases 1-4). Installing a pack from `upload_files` also needs employees on
+the sandbox image with the `install-employee-pack-task` skill, and the dashboard in the chat needs
+the dashboard's `mcp-app` screen.
 
 ## What's here
 
@@ -54,7 +52,7 @@ codex plugin marketplace add Greatape-AI/greatape-plugin
 Install GreatApe from the plugin list and sign in when asked.
 
 **ChatGPT**: until the plugin is listed, add the server as a custom MCP server in developer mode:
-`https://staging.api.greatapeai.com/mcp`.
+`https://api.greatapeai.com/mcp`.
 
 ## Tools
 

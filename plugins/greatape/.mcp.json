@@ -2,7 +2,7 @@
   "mcpServers": {
     "greatape": {
       "type": "http",
-      "url": "https://staging.api.greatapeai.com/mcp"
+      "url": "https://api.greatapeai.com/mcp"
     }
   }
 }
